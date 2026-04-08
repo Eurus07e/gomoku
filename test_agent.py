@@ -575,28 +575,28 @@ class Search(Agent):
             if empty_count > 95:
                 return 4
             if empty_count > 70:
-                return 5
-            return 6
+                return 4
+            return 5
         if empty_count > 115:
             return 2
         if empty_count > 95:
             return 3
         if empty_count > 75:
-            return 4
+            return 3
         if empty_count > 35:
-            return 5
-        return 6
+            return 4
+        return 5
 
     def get_search_width(self, depth):
         if depth >= 6:
             return 8
         if depth >= 5:
-            return 10
+            return 9
         if depth >= 4:
             return 12
         if depth == 3:
-            return 14
-        return 16
+            return 13
+        return 13
 
     def get_immediate_threat_move(self, board):
         oppo_candidates = self.get_candidate_moves(board, self.opponent)
